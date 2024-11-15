@@ -1,0 +1,62 @@
+{% extends 'myapp/base.html' %}
+{% load static %}
+
+{% block title %}О нас{% endblock %}
+
+{% block content %}
+    <div class="container" style="margin_top: 40px;">
+        <img src="{% static 'img/logo.png' %}" alt="Логотип" class="logo-img" style="width:20%;">
+    </div>
+    <h2 class="mb-1"><strong>О нас</strong></h2>
+    <!-- Информация о компании -->
+    <p>Оптовая база «Спектр» - это торговая компания по продажам товаров для дома и дачи.
+        Уже 25 лет мы предлагаем своим клиентам широкий ассортимент продукции по низким
+        ценам.</p>
+    <p>Мы знаем, какие товары для дома и дачи лучше всего продаются сейчас.
+        Именно поэтому все товары, представленные в нашем ассортименте, являются лидерами
+        и отлично продаются через интернет-магазины, розничные точки, торговые площадки и доски объявлений.</p>
+    <p>Мы - группа опытных специалистов, работающих над обеспечением наших клиентов наилучшими возможными решениями.</p>
+
+    <div class="card mb-4">
+        <div class="card-header">
+            <strong>Наша задача</strong>
+        </div>
+        <div class="card-body">
+            <p class="card-text">Наша цель — предоставлять вам передовые и результативные продукты и услуги, способствующие вашему росту и развитию.</p>
+        </div>
+    </div>
+    <!-- Команда -->
+    <div class="card mb-4">
+        <div class="card-header">
+            <strong>Наша команда</strong>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-4 text-center mb-4">
+                    <img src="{% static 'img/1.jpg' %}" class="img-fluid rounded-circle mb-3" alt="Алексей Бурунов">
+                    <h5>Алексей Бурунов</h5>
+                    <p>Основатель и генеральный директор</p>
+                </div>
+                <div class="col-md-4 text-center mb-4">
+                    <img src="{% static 'img/3.png' %}" class="img-fluid rounded-circle mb-3" alt="Анна-Мария Верещагина">
+                    <h5>Анна-Мария Верещагина</h5>
+                    <p>Директор по финансам и маркетингу</p>
+                </div>
+                <div class="col-md-4 text-center mb-4">
+                    <img src="{% static 'img/2.jpg' %}" class="img-fluid rounded-circle mb-3" alt="Валерий Карамазов">
+                    <h5>Валерий Карамазов</h5>
+                    <p>Технический директор</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-header">
+            <strong>Контактная информация</strong>
+        </div>
+        <div class="card-body">
+            <p class="card-text">При наличии вопросов или предложений, свяжитесь с нами по электронной почте: <a href="mailto:info@spectr.ru">info@spektr.ru</a> или телефону: +7 (495) 123-45-67.</p>
+        </div>
+    </div>
+{% endblock %}

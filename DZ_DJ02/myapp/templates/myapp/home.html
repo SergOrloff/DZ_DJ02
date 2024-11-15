@@ -1,0 +1,124 @@
+{% extends 'myapp/base.html' %}
+{% load static %}
+
+{% block title %}Главная{% endblock %}
+
+{% block content %}
+<div class="jumbotron jumbotron-fluid text-center text-white" style="background-image: url('{% static 'img/body.jpg' %}'); background-size: cover;">
+        <div class="container">
+            <h1 class="display-4" style="color: Lime;"><strong>Добро пожаловать!</strong></h1>
+            <p class="lead" style="color: Lime; font-size: 2em;"><strong>Мы приветствуем вас на нашей главной странице! <br>И здесь вы найдете и новости, и статьи, и обновления.</strong></p>
+            <a class="btn btn-primary btn-lg" href="{% url 'about' %}" role="button">Узнать больше о компании</a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <h2>Последние новости</h2>
+            <div class="card mb-4">
+                <img src="{% static 'img/new_filial.jpg' %}" class="card-img-top" alt="Открытие нового филиала">
+                <div class="card-body">
+                    <h5 class="card-title">Открытие новых филиалов в России</h5>
+                    <p class="card-text">Мы рады сообщить об открытии новых филиалов нашей компании <strong>в Москве, Санкт-Петербурге и Нижнем Новгороде</strong>. Это важный шаг в нашем развитии.</p>
+                </div>
+            </div>
+            <div class="card mb-4">
+                <img src="{% static 'img/for-dog.webp' %}" class="card-img-top" alt="Запуск нового продукта">
+                <div class="card-body">
+                    <h5 class="card-title">Запуск нового продукта</h5>
+                    <p class="card-text">Наш новый продукт <strong>"Расческа для больших собак"</strong> уже доступен для заказа. Он сочетает в себе передовые технологии и уникальный дизайн.</p>
+                </div>
+            </div>
+        </div>
+
+<div class="col-md-6">
+    <h2>Популярные статьи</h2>
+    <div id="articlesAccordion">
+        <div class="card">
+            <div class="card-header" id="headingOne">
+                <h5 class="mb-0">
+                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Как выбрать идеальный продукт для вас
+                    </button>
+                </h5>
+            </div>
+
+            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#articlesAccordion">
+                <div class="card-body">
+                    Выбор идеального продукта может быть сложной задачей. Важно учитывать такие факторы, как функциональность, поддержка, совместимость и стоимость. В этой статье мы рассмотрим всё нужное, что поможет Вам сделать правильный выбор.
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" id="headingTwo">
+                <h5 class="mb-0">
+                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        История нашего успеха: от идеи до реализации
+                    </button>
+                </h5>
+            </div>
+            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#articlesAccordion">
+                <div class="card-body">
+                    Наш путь в коммерции начался с идеи, которая превратилась в успешный проект. В этой статье мы расскажем о том, как мы прошли через этапы разработки бизнес-концепции, тестирования и внедрения современных технологий вывода продуктов на рынок, а также о  том, какие уроки мы извлекли в процессе становления компании.
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" id="headingThree">
+                <h5 class="mb-0">
+                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Преимущества работы с нами
+                    </button>
+                </h5>
+            </div>
+            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#articlesAccordion">
+                <div class="card-body">
+                    Мы знаем, какие товары для дома и дачи лучше всего продаются сейчас.
+                    Именно поэтому все товары, представленные в нашем ассортименте, являются лидерами и отлично продаются через интернет-магазины, розничные точки, торговые площадки и доски объявлений.
+                    В этой статье мы подробно расскажем, что делает нас идеальными партнерами для ваших IT-проектов.
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="mt-5">
+    <h2>Отзывы наших клиентов</h2>
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="{% static 'img/client.jpg' %}" class="rounded-circle mb-3" alt="Отзыв клиента" style="width: 300px; height: 300px;">
+                <div class="d-block w-100 bg-light p-5">
+                    <p class="lead">"Отличный сервис! Быстрая доставка и высокое качество."</p>
+                    <footer class="blockquote-footer">Андрей Богомазов</footer>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="{% static 'img/client1.jpg' %}" class="rounded-circle mb-3" alt="Отзыв клиента" style="width: 300px; height: 300px;">
+                <div class="d-block w-100 bg-light p-5">
+                    <p class="lead">"Продукция с замечательным соотношением 'цена/качество'. Будем заказывать снова!"</p>
+                    <footer class="blockquote-footer">Иван Петров</footer>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="{% static 'img/client2.jpg' %}" class="rounded-circle mb-3" alt="Отзыв клиента" style="width: 300px; height: 300px;">
+                <div class="d-block w-100 bg-light p-5">
+                    <p class="lead">"Отличная команда! Рекомендую всем оптовикам."</p>
+                    <footer class="blockquote-footer">Фируза Кабанова</footer>
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Предыдущий</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Следующий</span>
+        </a>
+    </div>
+</div>
+{% endblock %}

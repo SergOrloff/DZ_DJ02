@@ -1,0 +1,60 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    background: linear-gradient(to right, lightblue, lightgreen);
+}
+
+.jumbotron {
+    background-size: cover;
+    color: white;
+}
+
+.card-title {
+    font-weight: bold;
+}
+
+.carousel-item {
+    min-height: 200px;
+}
+
+footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.main-content {
+    margin-top: 80px;
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+@media (min-width: 992px) {
+    .navbar-nav {
+        margin-left: auto;
+    }
+}
+
+}
+.container {
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           margin-top: 20px;
+}
+
+.logo-img {
+       width: 20%;
+       height: auto;
+       transform: translateX(100%); /* Сдвиг вправо на 50% ширины контейнера */
+}
+
+.container.mt4 {
+        margin-top: 20px;
+}
